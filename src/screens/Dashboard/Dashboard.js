@@ -48,16 +48,18 @@ const Dashboard = () => {
             } else {
                 setWinner('X is Winner')
             }
-        } else {
-            window.location.reload()
         }
+    }
+
+    const handeReload = () => {
+        window.location.reload()
     }
 
     return (
         <div className="dashboard container">
             <h1>X --- Tic-tac-toe --- O</h1>
             <h2 className="text-success">{winner}</h2>
-            <div className="row">
+            <div className="row text">
                 {ticTacToe.map((value, index) => {
                     return (
                         <div className="col-4 mb-3" key={index}>
@@ -68,6 +70,7 @@ const Dashboard = () => {
                     )
                 })}
             </div>
+            <button onClick={handeReload} className="btn btn-success">Reload</button>
         </div>
     );
 }

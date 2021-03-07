@@ -48,6 +48,8 @@ const Dashboard = () => {
             } else {
                 setWinner('X is Winner')
             }
+        } else {
+            window.location.reload()
         }
     }
 
